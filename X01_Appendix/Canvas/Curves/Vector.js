@@ -2,6 +2,8 @@
 var Vector2D;
 (function (Vector2D_1) {
     class Vector2D {
+        x;
+        y;
         constructor(_x, _y) {
             this.setXY(_x, _y);
         }

@@ -3,9 +3,10 @@ var Curves;
 (function (Curves) {
     var V2 = Vector2D.Vector2D;
     class ControlPoint extends V2 {
+        radius = 5;
+        number;
         constructor(_num, _position) {
             super(_position.x, _position.y);
-            this.radius = 5;
             this.number = _num;
         }
         /**

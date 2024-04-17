@@ -67,6 +67,16 @@ var EVENTTYPE;
     EVENTTYPE[EVENTTYPE["LOAD"] = 8] = "LOAD";
 })(EVENTTYPE || (EVENTTYPE = {}));
 class Setup {
+    /** Current horizontal mouse or touch position */
+    static pointerX = 0;
+    /** Current vertical mouse or touch position */
+    static pointerY = 0;
+    /** Number of touches or mouse button currently pressed
+        (0=None, 1=Left, 2=Middle, 3=Right) */
+    static pointerPress = 0;
+    static listener = {};
+    static keyPressed = {};
+    static timeout = -1;
     /** Creates the canvas and sets up tracking for mouse, touch and keys */
     static init() {
         document.body.style.margin = "0"; //"{margin=0;padding=0;}"
@@ -226,15 +236,5 @@ class Setup {
         });
     }
 }
-/** Current horizontal mouse or touch position */
-Setup.pointerX = 0;
-/** Current vertical mouse or touch position */
-Setup.pointerY = 0;
-/** Number of touches or mouse button currently pressed
-    (0=None, 1=Left, 2=Middle, 3=Right) */
-Setup.pointerPress = 0;
-Setup.listener = {};
-Setup.keyPressed = {};
-Setup.timeout = -1;
 Setup.init();
 //# sourceMappingURL=Setup.js.map
